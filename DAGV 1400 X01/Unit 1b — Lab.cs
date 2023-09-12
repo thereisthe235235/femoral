@@ -1,23 +1,40 @@
-using System;
 
-namespace MyApplication
+using System;
+					
+public class Program
 {
-  class Program
-  {
-    static void Main(string[] args)
-    {      int x = 20 - 1;
-      string str1 = "there";
-      string str2 = " was an attept";
-      int r = x;
-      double fl1 = 3.333;
-      double fl2 = 6.667;
-      bool bo1 = true;
-      bool bo2 = false;
-      Console.WriteLine(r);
-      Console.WriteLine(str1 + str2);
-      Console.WriteLine(fl1 / fl2);
-      Console.WriteLine(bo1);
-       // here im difining my varibles and then doing diffrent opration from them, besides bool, it doesnt seem to work//
-    Console.WriteLine("whats your name?");
-      string Teeth = Console.ReadLine();
-      Console.WriteLine("hello" + Teeth);
+	public static void Main()
+	{
+		Console.WriteLine("what is the tepature:");
+		int temp = Convert.ToInt32(Console.ReadLine());
+		if (temp > 30) 
+      {
+        Console.WriteLine("Stay hydrated and avoid staying in the sun for too long!");
+    }
+		if (temp < 30)
+	 {
+        Console.WriteLine("its all good, weather looking fine");
+	}
+    // reading the temp that is inputed, and then it determined what line to read out.//
+
+		{
+			Console.WriteLine("what grade did you get?:");
+			int score = Convert.ToInt32(Console.ReadLine());
+if (score >= 90)
+{
+  Console.WriteLine("A");
+} 
+else if(score >= 80)
+{
+  Console.WriteLine("B");
+}
+else if(score <= 79)
+{
+	Console.WriteLine("Asuming this is a grade you got in highschool, You fail! And thats all that matters so isnt the other letter grades unnecessary?");
+}
+		
+		}
+	}
+}
+// reading what score you put into the code. And then putting the reader into 3 diffrent camps based on the input. and writing the statment reltive to the score // 
+
