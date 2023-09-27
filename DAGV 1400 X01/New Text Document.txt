@@ -1,15 +1,1 @@
-int number = 32;
-      Console.WriteLine(number);
-
-        string name = "david";
-      Console.WriteLine(name);
-      string Var = "9";
-      Console.WriteLine(Var);
-            int numberneeded = 69 + 31;
-      Console.WriteLine(numberneeded);
-      int anothernumber = numberneeded * 6;
-      Console.WriteLine(anothernumber);
-      int FLdex = 8 % numberneeded * anothernumber;
-      Console.WriteLine(FLdex);
-      // for these i was just trying to try out all the diffrent metheds of printing words and doing a few operacations and mixign them together. idk how to save as a cs file // 
-      
+Console.WriteLine("what")
