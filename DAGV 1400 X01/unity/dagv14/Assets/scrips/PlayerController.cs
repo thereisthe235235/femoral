@@ -5,25 +5,29 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    private CharacterController characterController;
-    public Rigidbody rb;
-    public float jumpAmount = 10;
-    public float Speed = 5f;
+   public float moveSpeed = .1f;
+    private float jumpForce = 5f;
+    private float gravity = 9.81f;
+
+    private CharacterController controller;
+
+    private float ForwardInput;
+    private float HorzionInput;
+    private bool isJumping;
 
     void Start()
     {
-        characterController = GetComponent<CharacterController>();
     }
 
-
+    // Update is called once per frame
     void Update()
     {
-        Vector3 move = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
+   
+        HorzionInput = Input.GetAxis("Horizontal");
+        ForwardInput = Input.GetAxis("Vertical");
 
-        characterController.Move(move * Time.deltaTime * Speed);
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            rb.AddForce(Vector3.up * jumpAmount, ForceMode.Impulse);
-        }
+        transform.Translate(Vector3.forward * Time.deltaTime * moveSpeed * ForwardInput);
+        transform.Translate(Vector3.right * Time.deltaTime * moveSpeed * HorzionInput);
+
     }
 }
