@@ -4,7 +4,7 @@ using System.Security.Cryptography;
 using System.Threading;
 using UnityEngine;
 
-public class PlayerController : MonoBehaviour
+public class Playermovment : MonoBehaviour
 {
     public float speed = 5.0f;
     private float horizontalInput;
