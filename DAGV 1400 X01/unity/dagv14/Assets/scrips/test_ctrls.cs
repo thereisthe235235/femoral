@@ -5,7 +5,7 @@ using System.Security.Cryptography;
 using System.Threading;
 using UnityEngine;
 
-public class PlayerController : MonoBehaviour
+public class test_ctrls : MonoBehaviour
 {
     public float speed = 5.0f;
     public float sprintspeed = 10.0f;
@@ -38,8 +38,8 @@ public class PlayerController : MonoBehaviour
         {
             playerRb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
         }
-
-
+      
+        
         if (Input.GetKey(KeyCode.LeftShift))
         {
             speed = sprintspeed;
