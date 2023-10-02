@@ -39,6 +39,9 @@ public class PlayerController : MonoBehaviour
             playerRb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
         }
 
+// here is where i set up the sprint. No matter what i press the charecter will use the speed verible//
+// i just change the speed to be the sprint speed verible vaule, and then reset it when the shift key is no longer being pressed.//
+
 
         if (Input.GetKey(KeyCode.LeftShift))
         {
@@ -53,6 +56,9 @@ public class PlayerController : MonoBehaviour
             speed = 5.0f;
         }
 
+//here is where i created the crouch ablity. first we define what happens when the bool vaule of crouch vaule is true//
+// then I set the left control to set the crouuch value when held down. and then resets the vaules to its orginal when they let go of it.//
+//ives set crouch to change speed, jumpforce, and the scale of y. i made him slower, made the jump force 0 so there is no jump, and made him a little shofter.//
 
         if (Input.GetKeyDown(KeyCode.LeftControl))
         {
