@@ -7,13 +7,13 @@ public class PlayerController : MonoBehaviour
 public float horizontalinput;
 public float speed = 10.0f;
 public float xrange = 43;
+public float inventory = 0;
 
 public Transform blaster;
 public GameObject bolt;
+
     void Start()
     {
-    
-        
     }
 
  
@@ -35,6 +35,15 @@ public GameObject bolt;
         if(Input.GetKeyDown(KeyCode.Space))
         {
             Instantiate(bolt, blaster.transform.position, bolt.transform.rotation);
+            
         }
     }
+    private void OnTriggerEnter(Collider other)
+    {
+        Destroy(other.gameObject);
+        inventory = inventory + 1;
+       
+    }
+
+
 }
