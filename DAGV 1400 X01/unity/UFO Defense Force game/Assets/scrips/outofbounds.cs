@@ -9,7 +9,7 @@ public class outofbounds : MonoBehaviour
     // Start is called before the first frame update
 void Awake()
 {
-    //Time.timeScale = 1;
+    Time.timeScale = 1;
 }
 
     // Update is called once per frame
@@ -23,7 +23,7 @@ void Awake()
         {
             Debug.Log("Game Over!");
             Destroy(gameObject);
-        
+            
         }
     }
    
