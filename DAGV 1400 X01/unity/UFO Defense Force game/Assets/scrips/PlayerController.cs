@@ -38,12 +38,7 @@ public GameObject bolt;
             
         }
     }
-    private void OnTriggerEnter(Collider other)
-    {
-        Destroy(other.gameObject);
-        inventory = inventory + 1;
-       
-    }
+    
 
 
 }

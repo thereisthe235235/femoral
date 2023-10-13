@@ -2,17 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy_spawn_manger : MonoBehaviour
+public class pick_up_spawner : MonoBehaviour
 {
-    public GameObject[] ufoPrefabs;
+    public GameObject[] pickup;
     
     private float spawnRangeX = 40.0f;
 
     private float spawnPosZ = 40.0f;
 
-    private float startDelay = 2.0f;
+    private float startDelay = 4.0f;
 
-    private float spawnInterval = 1.5f;
+    private float spawnInterval = 5.5f;
 
     void Start()
     {
@@ -36,10 +36,8 @@ public class Enemy_spawn_manger : MonoBehaviour
     void SpawnRandomUFO()
     {
         Vector3 spawnPos = new Vector3(Random.Range(-spawnRangeX,spawnRangeX),0,spawnPosZ);
-        int ufoindex = Random.Range(0,ufoPrefabs.Length); 
-        Instantiate(ufoPrefabs[ufoindex],spawnPos, ufoPrefabs[ufoindex].transform.rotation);
+        int ufoindex = Random.Range(0,pickup.Length); 
+        Instantiate(pickup[ufoindex],spawnPos, pickup[ufoindex].transform.rotation);
     }
 
 }
-
-
