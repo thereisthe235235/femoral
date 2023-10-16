@@ -11,9 +11,11 @@ public float inventory = 0;
 
 public Transform blaster;
 public GameObject bolt;
+public GameManager gameManager;
 
     void Start()
     {
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
     }
 
  
@@ -32,7 +34,7 @@ public GameObject bolt;
             transform.position = new Vector3(xrange,transform.position.y, transform.position.z);
         }
 
-        if(Input.GetKeyDown(KeyCode.Space))
+        if(Input.GetKeyDown(KeyCode.Space) && gameManager.isGameOver == false)
         {
             Instantiate(bolt, blaster.transform.position, bolt.transform.rotation);
             
