@@ -9,6 +9,9 @@ public float speed = 10.0f;
 public float xrange = 43;
 public float inventory = 0;
 
+ private AudioSource boltadio;
+public AudioClip firingSound;
+
 public Transform blaster;
 public GameObject bolt;
 public GameManager gameManager;
@@ -16,6 +19,7 @@ public GameManager gameManager;
     void Start()
     {
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+        boltadio = GetComponent<AudioSource>();
     }
 
  
@@ -37,6 +41,7 @@ public GameManager gameManager;
         if(Input.GetKeyDown(KeyCode.Space) && gameManager.isGameOver == false)
         {
             Instantiate(bolt, blaster.transform.position, bolt.transform.rotation);
+            boltadio.PlayOneShot(firingSound, 1.0f);
             
         }
     }
