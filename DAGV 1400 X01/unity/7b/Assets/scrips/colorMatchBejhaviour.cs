@@ -2,17 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class colorMatchBejhaviour : MonoBehaviour
+public class colorMatchBejhaviour : MatchBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+   public ColorIDDataList colorIDDataListObj;
 
-    // Update is called once per frame
-    void Update()
+    private void Awake()
     {
-        
+         idobj = colorIDDataListObj.currentColor;
+
+    }
+    public void ChangeColor(SpriteRenderer renderer)
+    {
+        var newColor = idObj as ColorID;
+        renderer.color = newColor.value;
+
+
     }
 }
